@@ -26,9 +26,9 @@
   before_build:
   - cmd: nuget restore
   build:
-    publish_nuget: true
-    publish_nuget_symbols: true
+    publish_nuget: false
+    publish_nuget_symbols: false
     verbosity: minimal
   artifacts:
-  - path: '**\Matilde*.nupkg'
-    name: Nuget packages
+  - path: '**\bin\Release\*.exe'
+    name: Binaries
